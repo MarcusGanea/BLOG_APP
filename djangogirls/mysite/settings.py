@@ -25,7 +25,7 @@ SECRET_KEY = os.getenv('SECRET')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = [os.getenv('PROJECT_DOMAIN') + ".glitch.me"]
 
 
 # Application definition
