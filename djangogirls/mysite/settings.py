@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for mysite project.
 
@@ -11,6 +13,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +31,12 @@ SECRET_KEY = os.getenv('SECRET')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.getenv('PROJECT_DOMAIN') + ".glitch.me"]
+project_domain = os.getenv('PROJECT_DOMAIN')
+if project_domain:
+    ALLOWED_HOSTS = [project_domain + ".glitch.me"]
+else:
+    ALLOWED_HOSTS = []
+
 
 
 # Application definition
