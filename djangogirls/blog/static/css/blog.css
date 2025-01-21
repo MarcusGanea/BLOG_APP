@@ -6,6 +6,10 @@
     padding: 20px 20px 20px 40px;
 }
 
+.page-body {
+    background-color: #838383;
+}
+
 .page-header h1,
 .page-header h1 a,
 .page-header h1 a:visited,
@@ -23,7 +27,7 @@ h4 {
 }
 
 .date {
-    color: #828282;
+    color: #000000;
 }
 
 .save {
@@ -51,6 +55,11 @@ h4 {
 .post h2 a,
 .post h2 a:visited {
     color: #000000;
+}
+
+.post h2 a,
+.post h2 a:visited:hover {
+    color: #4d1290;
 }
 
 .post > .date,
